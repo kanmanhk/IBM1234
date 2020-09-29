@@ -33,7 +33,7 @@ ALTER_ID=${ALTER_ID:-"1"}
 mkdir -p $IBM_APP_NAME
 
 if [ ! -f "./config/v2ray" ]; then
-    echo "${BLUE}download v2ray${END}"
+    echo "${BLUE}download v2ray${END}" 
     pushd ./config
     new_ver=$(curl -s https://github.com/v2fly/v2ray-core/releases/latest | grep -Po "(\d+\.){2}\d+")
     wget -q -Ov2ray.zip https://github.com/v2fly/v2ray-core/releases/download/v${new_ver}/v2ray-linux-64.zip
